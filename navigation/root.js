@@ -14,6 +14,7 @@ import AboutScreen from '../screens/About';
 import SettingsScreen from '../screens/Settings';
 import ContactScreen from '../screens/Contact';
 
+
 const Stack = createNativeStackNavigator();
 
 const RooNavigation = () => {
@@ -43,7 +44,7 @@ const RooNavigation = () => {
                 <Stack.Screen name="About" component={AboutScreen} />
                 <Stack.Screen name="Settings" component={SettingsScreen} />
                 <Stack.Screen name="Contact" component={ContactScreen} />
-
+                
             </Stack.Navigator>
         </NavigationContainer>
     )

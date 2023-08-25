@@ -1,29 +1,33 @@
-import { View, Text, Touchable, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React, { useContext } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { api } from '../constans/conf/axios'
 import { useNavigation } from '@react-navigation/native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useAuth } from '../contextAPI/useAuth'
+import BackIcon from '../constans/icons/back';
 
 const AboutScreen = () => {
-  const { navigate } = useNavigation();
   const { logout, user } = useContext(useAuth);
+  const navigation = useNavigation();
 
-  console.log(user)
 
   return (
     <SafeAreaView style={styles.safe}>
+      <TouchableOpacity onPress={() => navigation.navigate('Main')}>
+        <BackIcon size="32" />
+      </TouchableOpacity>
       <View style={styles.container}>
         <View style={styles.item}>
-          <Text>{ user.username}</Text>
+          <Text>{user.username}</Text>
         </View>
         <View style={styles.item}>
-          <Text>{ user.email}</Text>
+          <Text>{user.email}</Text>
         </View>
 
-
-
+        <TouchableOpacity style={styles.button} onPress={() => {() => {}}}>
+          <Text>Düzenle</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => logout(navigate)}>
           <Text>Çıkış</Text>
         </TouchableOpacity>

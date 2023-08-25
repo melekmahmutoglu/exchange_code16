@@ -21,6 +21,7 @@ const Parite = ({ eur, usd}) => {
             <View>
                 <Text style={styles.title}>Dolar/ Euro Paritesi</Text>
                 <Text style={styles.text}>{(usd?.sales / eur?.sales).toFixed(4)} TL</Text>
+                
             </View>
         </View>
     </TouchableOpacity>

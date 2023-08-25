@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 
@@ -22,6 +22,9 @@ const Exchange = ({ data }) => {
                 <View style={styles.exchagne}>
                     <Text style={styles.text}>Satış</Text>
                     <Text style={styles.price}>{data.sales}</Text>
+                </View>
+                <View>
+                    <TextInput/>
                 </View>
             </View>
         </TouchableOpacity>
