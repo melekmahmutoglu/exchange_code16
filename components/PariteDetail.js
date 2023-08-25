@@ -45,6 +45,7 @@ const PariteDetail = ({ data, value, setValue, currentInput, setCurrentInput}) =
           keyboardType='numeric'
           placeholder='0'
         />
+        
       </View>
       
     </View>
@@ -123,5 +124,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     color: '#ffb366',
-  }
+  },
 })
